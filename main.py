@@ -23,6 +23,11 @@ logging.basicConfig(level=logging.INFO)
 sessionStorage = {}
 
 
+@app.route('/')
+def index():
+    return 'Это мы не проходили!'
+
+
 # Функция получает тело запроса и возвращает ответ.
 # Внутри функции доступен request.json - это JSON, который отправила нам Алиса в запросе POST
 @app.route('/post', methods=['POST'])
